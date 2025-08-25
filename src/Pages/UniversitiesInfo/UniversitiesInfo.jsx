@@ -8,29 +8,44 @@ import 'slick-carousel/slick/slick-theme.css';
 // The UniversitiesInfo component is not modified as the focus is on UniDetails.
 const UniversitiesInfo = () => {
   return (
-    <section className="bg-[#CFD8DC] text-teal body-font">
-      <div className="p py-24 mx-auto">
-        <div className="flex flex-wrap">
+<section className=" pb-24 h-screen">
+      <div className="container mx-auto px-5">
+        
+        {/* Section Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-2">
+            Explore Our Partner Universities
+          </h2>
+          <div className="h-1.5 w-24 bg-amber-600 mx-auto rounded"></div>
+        </div>
+
+        <div className="flex flex-wrap -m-4">
           {universities.map((item, index) => (
-            <div key={index} className="p-3 md:w-1/3 sm:mb-0 mb-6">
-              <div className="h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src={item.imgUrl}
-                />
+            <div key={index} className="p-4 md:w-1/3">
+              <div className="bg-gray-100 rounded-xl shadow-lg overflow-hidden h-full transform transition-transform duration-300 hover:scale-105">
+                
+                <NavLink to={`/UniDetails/${item.name}`}>
+                  <div className="h-64 overflow-hidden">
+                    <img
+                      alt={item.name}
+                      className="object-cover object-center h-full w-full"
+                      src={item.imgUrl}
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-xl font-bold text-teal-800">
+                      {item.name}
+                    </h3>
+                  </div>
+                </NavLink>
+
               </div>
-              <NavLink
-                to={`/UniDetails/${item.name}`}
-                className="text-xl w-full font-medium title-font text-center text-[#00695C] mt-3"
-              >
-                {item.name}
-              </NavLink>
             </div>
           ))}
         </div>
       </div>
     </section>
+
   );
 };
 
@@ -76,7 +91,7 @@ export const UniDetails = () => {
   }
 
   return (
-    <section className="relative bg-[#CFD8DC] text-teal">
+    <section className="relative  text-teal">
      {/* Sticky Table of Contents */}
 <nav
   className={`hidden lg:block fixed left-0 top-1/2 -translate-y-1/2 z-50 transition-all duration-300 ${
@@ -145,7 +160,7 @@ export const UniDetails = () => {
         <div className="w-full flex flex-wrap justify-center mt-12 gap-y-6 gap-x-12">
           {university.contact.map((item, index) => (
             <div key={index} className="flex items-center">
-              <span className="material-icons flex items-center justify-center text-white bg-teal p-3 rounded-full text-2xl drop-shadow-md">
+              <span className={`material-symbols-outlined flex items-center justify-center text-white bg-teal p-3 rounded-full text-2xl drop-shadow-md`}>
                 {item.icon}
               </span>
               <p className="ml-4 text-white text-lg">{item.description}</p>
@@ -164,7 +179,7 @@ export const UniDetails = () => {
             <p className="leading-relaxed text-base text-teal text-justify mb-8">
               {university.overview}
             </p>
-            <div className="flex items-center p-4 rounded-lg bg-[#CFD8DC] shadow-sm mt-4">
+            <div className="flex items-center p-4 rounded-lg shadow-sm mt-4">
               <img
                 alt="Vice Chancellor"
                 src={university.chancellorImg}
@@ -230,7 +245,7 @@ export const UniDetails = () => {
         {university.scholarships.map((item, index) => (
           <div
             key={index}
-            className="mb-16 p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 ease-in-out bg-white"
+            className="mb-16 p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 ease-in-out "
           >
             <h3 className="text-3xl font-bold text-teal text-center mb-2">
               {item.name}
@@ -247,8 +262,8 @@ export const UniDetails = () => {
                 <ul className="space-y-6">
                   {item.eligibilityCriteria.map((criteria, idx) => (
                     <li key={idx} className="flex items-start">
-                      <span className="material-icons text-[#00ACC1] text-2xl mr-4">
-                        check_circle
+                      <span className="material-symbols-outlined text-[#00ACC1] text-2xl mr-4">
+                        {criteria.icon}
                       </span>
                       <div>
                         <h5 className="text-lg font-semibold text-[#00695C]">
@@ -270,7 +285,7 @@ export const UniDetails = () => {
                 </h4>
                 <ul className="space-y-6">
                   <li className="flex items-start">
-                    <span className="material-icons text-[#00ACC1] text-2xl mr-4">
+                    <span className="material-symbols-outlined text-[#00ACC1] text-2xl mr-4">
                       card_giftcard
                     </span>
                     <div>
@@ -281,7 +296,7 @@ export const UniDetails = () => {
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="material-icons text-[#00524e] text-2xl mr-4">
+                    <span className="material-symbols-outlined text-[#00524e] text-2xl mr-4">
                       sync_alt
                     </span>
                     <div>
@@ -294,7 +309,7 @@ export const UniDetails = () => {
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="material-icons text-[#00ACC1] text-2xl mr-4">
+                    <span className="material-symbols-outlined text-[#00ACC1] text-2xl mr-4">
                       schedule
                     </span>
                     <div>

@@ -64,7 +64,7 @@ const onSubmit = async (data) => {
     } else {
         try {
             // Use fetch to send the FormData to the backend.
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/applicationForm`, {
+            const response = await fetch(`https://sample-backend-gray.vercel.app/applicationForm`, {
                 method: "POST",
                 body: formData,
             });
@@ -146,8 +146,18 @@ const onSubmit = async (data) => {
           <section className="body-font relative text-custom">
                <div className="mx-auto px-5 py-24">
                     <div className="mb-12 flex w-full flex-col text-center">
-                         <h1 className="title-font mb-4 text-3xl font-bold heading-custom sm:text-4xl uppercase">Application Form</h1>
-                         <p className="mx-auto text-custom leading-relaxed lg:w-2/3">We'd love to hear from you! Please fill out the form below.</p>
+                         <h1 className="title-font mb-4 text-3xl font-bold text-gray-900 sm:text-4xl uppercase">Application Form</h1>
+                        <div className="w-full lg:w-2/3 mx-auto px-5 text-center">
+  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+    Your Journey Starts Here
+  </h2>
+  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+    Welcome to the **Global IT Scholarship Program** application. We are thrilled you're taking this step toward a future of innovation and leadership. This form is designed to help us understand your background, aspirations, and passion for technology.
+  </p>
+  <p className="text-md text-gray-600 leading-relaxed">
+    Please provide all the required information accurately. We look forward to reviewing your application and learning more about you. Good luck!
+  </p>
+</div>
                     </div>
 
                     <div className="mx-auto md:w-3/4 ">

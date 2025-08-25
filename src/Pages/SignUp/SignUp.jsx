@@ -22,7 +22,7 @@ const SignUp = () => {
       // Explicitly add the role here before sending to the server
       const finalData = { ...data, role: "student" };
 
-      let result = await fetch(`${import.meta.env.VITE_API_URL}/signup`, {
+      let result = await fetch(`https://sample-backend-gray.vercel.app/signup`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -41,8 +41,8 @@ const SignUp = () => {
       } else {
         console.error("Invalid API response format:", result);
         // Using a modal instead of alert for a better user experience
-        // alert("Invalid response from server. Check console for details.");
-        Example: showModal("Invalid response from server. Check console for details.");
+        alert("Invalid response from server. Check console for details.");
+        // Example: showModal("Invalid response from server. Check console for details.");
       }
     } catch (error) {
       console.log("Sign up error:", error);

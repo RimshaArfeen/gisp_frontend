@@ -25,6 +25,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  
   return (
     <nav className="bg-teal text-gray-100 shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

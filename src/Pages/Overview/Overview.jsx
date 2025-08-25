@@ -1,5 +1,5 @@
 
- import React from 'react'
+import React from 'react'
 import About from '../About/About.jsx'
  import {
     whatWeDoPoints,
@@ -51,7 +51,7 @@ import About from '../About/About.jsx'
                                             <div  className="border-2 border-custom bg-teal rounded flex h-full items-center">
                                                  <i className={`material-symbols-outlined text-white w-13 h-13 p-3 pl-4`}>
                                                       {item.icon}</i>
-
+ 
                                                  <span  className=" p-3 text-base leading-relaxed font-normal">{item.text}</span>
                                             </div>
                                        </div>

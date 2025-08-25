@@ -7,8 +7,8 @@ const Register = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <section className="w-full min-h-screen flex justify-center items-center bg-gradient-to-r from-gray-50 to-gray-100 px-5">
-      <div className="w-full md:w-3/4 lg:w-1/2 rounded-2xl p-8 relative overflow-hidden">
+    <section className="w-full min-h-screen flex justify-center items-center bg-gradient-to-r from-gray-50 to-gray-100 sm:px-5">
+      <div className="w-full md:w-3/4 lg:w-1/2 rounded-2xl sm:p-8 relative overflow-hidden">
         <AnimatePresence mode="wait">
           {isLogin ? (
             <motion.div

@@ -6,7 +6,7 @@ const AdminDashboard = () => {
   // Fetch Student Data
   const getStudentData = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/adminPg`);
+      const response = await fetch(`https://sample-backend-gray.vercel.app/adminPg`);
       if (!response.ok) {
         throw new Error("Error while fetching data");
       }
@@ -21,7 +21,7 @@ const AdminDashboard = () => {
   // Update Status
   const updateStatus = async (id, status) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/adminPg/${id}`, {
+      const response = await fetch(`https://sample-backend-gray.vercel.app/adminPg/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status }),

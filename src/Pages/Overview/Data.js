@@ -15,7 +15,7 @@ export const missionAndVision = [
          animation : "fade-left"
      }
    ];
-   
+    
    export const whatWeDoPoints = [
      {
        icon: "school",

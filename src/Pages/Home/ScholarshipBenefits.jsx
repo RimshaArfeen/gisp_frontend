@@ -6,18 +6,15 @@ const ScholarshipBenefits = () => {
 
     return (
 
-        <section className='lg:px-5 pb-20 lg:-mt-[17rem] '>
-            <h2
-                data-aos="fade-up"
-                className="w-full text-3xl font-bold uppercase tracking-wide text-center lg:text-right heading-custom mb-4"
-            >
-                Scholarship Benefits
-            </h2>
+        <section className='lg:px-5 py-24'>
+           <h2
+                    data-aos="fade-up"
+                    className="w-full text-3xl md:text-4xl font-bold uppercase tracking-wide text-center lg:text-right text-gray-900 mb-4"
+                >
+                    Scholarship Benefits
+                </h2>
+                <div data-aos="zoom-in" className="h-1.5 bg-amber-600 w-32 mb-14 mx-auto lg:mr-0 lg:ml-auto rounded"></div>
 
-            <div
-                data-aos="zoom-in"
-                className="h-[1.6px] bg-amber-600 w-40 mb-8 lg:mb-14 relative z-10 transition-all duration-300 group-hover:bg-teal-200 mx-auto lg:mr-0 lg:ml-auto"
-            ></div>
 
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-3 lg:px-0">

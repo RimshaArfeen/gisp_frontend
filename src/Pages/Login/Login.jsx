@@ -18,7 +18,7 @@ const Login = () => {
     try {
       const finalData = { ...data, role };
 
-      const result = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
+      const result = await fetch(`https://sample-backend-gray.vercel.app/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(finalData),

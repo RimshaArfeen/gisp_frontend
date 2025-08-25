@@ -31,7 +31,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className='bg-[#faf8f8]'>
+    <div className='bg-[#CFD8DC]'>
         <Navbar />
         <ScrollToTop />
         <Routes>
