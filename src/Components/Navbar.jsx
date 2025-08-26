@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "../index.css"
 const Navbar = () => {
    
   const [isOpen, setIsOpen] = useState(false);
@@ -27,11 +28,11 @@ const Navbar = () => {
 
   
   return (
-   <nav className="bg-[#008080] text-[#F8F8F8] shadow-md fixed w-full z-50">
+   <nav className="bg-navbar  shadow-md fixed w-full z-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex justify-between h-16 items-center">
       <div className="flex items-center">
-        <span className="text-3xl font-bold text-[#F8F8F8] tracking-wider">🎓 GISP</span>
+        <span className="text-3xl font-bold  tracking-wider">🎓 GISP</span>
       </div>
       <div className="hidden md:flex space-x-8">
         {applicants ? (

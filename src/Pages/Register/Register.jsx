@@ -1,3 +1,6 @@
+
+
+//Register.jsx
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Login from "../Login/Login";

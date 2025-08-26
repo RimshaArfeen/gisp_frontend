@@ -10,7 +10,7 @@ const UniversitiesInfo = () => {
   return (
 
     //Scholarship
-<section className="lgpb-48 h-fit ">
+<section className="pb-48 h-fit ">
       <div className="container mx-auto px-5 h-fit overflow-hidden">
         
         {/* Section Heading */}
@@ -23,7 +23,7 @@ const UniversitiesInfo = () => {
 
         <div className="flex flex-wrap -m-4">
           {universities.map((item, index) => (
-            <div key={index} className="p-4 md:w-1/3">
+            <div key={index} className="p-4 w-full sm:w-[85%] mx-auto my-2 md:my-0 md:w-1/3">
               <div className="bg-gray-200 rounded-xl shadow-lg overflow-hidden h-full transform transition-transform duration-300 ">
                 
                 <NavLink to={`/UniDetails/${item.name}`}>

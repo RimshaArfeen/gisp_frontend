@@ -27,12 +27,33 @@ Buttons/CTA: #FFEB3B (Bright Yellow)
 Underline/Accent: #00ACC1 (Cyan) */
 
 .bg-custom {
-     background-color: #F8F8F8 
+     background-color: #E0E1DD
 }
 
-.bg-teal{
-     background-color: #00695C;
+.bg-navbar{
+     background-color: #0D1B2A;
 }
+
+.bg-navbar-dark{
+     background-color: #0B1520;
+}
+
+.bg-footer{
+     background-color: #415A77;
+}
+
+.light-text {
+          color: "#FFFFFF"
+        }
+.dark-text{
+          color: "#0D1B2A"
+ }
+
+  /* primary{
+          DEFAULT: "#415A77", // Charcoal as the primary accent
+          light: "#778DA9", // Light blue for a softer touch
+        }, */
+
 
 .text-custom {
      color: #009688;
@@ -43,7 +64,7 @@ Underline/Accent: #00ACC1 (Cyan) */
 }
 
 .button-custom {
-     background-color: #dda201;
+     background-color: #415A77;
 }
 
 .underline-custom {

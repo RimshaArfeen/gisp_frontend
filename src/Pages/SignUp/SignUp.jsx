@@ -1,6 +1,6 @@
 
 
-
+//Signup.jsx
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
@@ -37,7 +37,7 @@ const SignUp = () => {
         localStorage.setItem("Applicants", JSON.stringify(result.result)); 
         localStorage.setItem("token", result.auth);
         console.log("Signed up successfully", result);
-        navigate("/");
+        navigate("/login");
       } else {
         console.error("Invalid API response format:", result);
         // Using a modal instead of alert for a better user experience
@@ -46,9 +46,6 @@ const SignUp = () => {
       }
     } catch (error) {
       console.log("Sign up error:", error);
-      // Using a modal instead of alert
-      // alert("Encountered an error while signing up: " + error.message);
-      // Example: showModal("Encountered an error while signing up: " + error.message);
     }
   };
   

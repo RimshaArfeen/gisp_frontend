@@ -38,7 +38,7 @@ function App() {
           {/* Public routes */}
           <Route path="/" element={<Register />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/UniDetails/:id" element={<UniDetails />} />
 
           {/* Protected routes - all routes inside here require authentication */}
