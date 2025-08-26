@@ -20,13 +20,14 @@ const Profile = () => {
 
   const UserProfile = async () => {
     try {
+      
       let token = localStorage.getItem('token');
       if (!token) {
         console.log('Token not found');
         return;
       }
 
-      let response = await fetch(`https://sample-backend-gray.vercel.app/profile`, {
+      let response = await fetch(`https://sample-backend-gray.vercel.app/api/profile`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,

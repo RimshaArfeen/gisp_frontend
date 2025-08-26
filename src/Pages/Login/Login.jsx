@@ -20,12 +20,14 @@ const Login = () => {
     try {
       const finalData = { ...data, role };
 
-      const result = await fetch(`https://sample-backend-gray.vercel.app/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(finalData),
+      const result = await fetch(`https://sample-backend-gray.vercel.app/api/login`, {
+       method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(finalData)
       });
-
+ 
       const responseData = await result.json();
 
       if (responseData.auth && responseData.user?.role === role) {

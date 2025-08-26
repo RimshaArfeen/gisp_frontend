@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import ScrollToTop from './Pages/ScrollToTop';
 import Navbar from './Components/Navbar';
@@ -25,10 +25,13 @@ function App() {
       duration: 900,
       once: true,
       easing: "ease-in-out",
-      offset: 100,
+      // offset: 100,
     });
   }, []);
+  
 
+  
+  
   return (
     <BrowserRouter>
     <div className='bg-custom'>

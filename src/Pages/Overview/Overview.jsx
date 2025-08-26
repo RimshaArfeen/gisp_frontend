@@ -20,7 +20,7 @@ import About from '../About/About.jsx'
                                        <div  className="md:w-[48%] px-6 transition duration-300 border-l-4 border-teal-700   "
                                        data-aos={item.animation}>
                                             <h2  className="tracking-widest text-2xl font-medium heading-custom uppercase mb-2">{item.title}</h2>
-                                            <h1  className="text-lg font-semibold text-gray-900">{item.heading}</h1>
+                                            <h1  className="text-lg font-semibold dark-text">{item.heading}</h1>
                                             <div  className="bg-teal h-[1.7px] rounded-full w-1/2 my-2"></div>
 
                                             <p  className="text-gray-700 leading-relaxed text-justify">
@@ -96,7 +96,7 @@ import About from '../About/About.jsx'
 
      <p  className="leading-relaxed font-bold text-3xl  text-center ">{item.heading}</p>
      <span  className="inline-block h-1 w-72 rounded bg-teal-800 my-3 mx-auto "></span>
-     <h2  className="text-gray-900 font-medium title-font tracking-wider text-sm  text-center ">HOLDEN CAULFIELD</h2>
+     <h2  className="dark-text font-medium title-font tracking-wider text-sm  text-center ">HOLDEN CAULFIELD</h2>
      <p  className="text-gray-500  text-center ">Senior Product Designer</p>
      </div>
    </div>
@@ -109,7 +109,7 @@ import About from '../About/About.jsx'
                    <div className="bg-cover bg-center bg-no-repeat bg-[url('https:img.freepik.com/free-photo/cheerful-businessman_1098-17041.jpg?t=st=1744100770~exp=1744104370~hmac=0c7702ba7846f5958c52fb1c9f4b34d8c7aaef40e5149bbfaaa56c304f0a6ae4&w=996')] 
  bg-gray-400 bg-blend-multiply overflow-hidden my-20">
                         <div  className="px-4 pl-14 w-full md:w-3/4 py-24 lg:py-48 lg:pt-56 ">
-                             <h1  className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-6xl">
+                             <h1  className="mb-4 text-4xl font-extrabold tracking-tight leading-none dark-text md:text-5xl lg:text-6xl">
                                   Meet Our Visionary Founder
                              </h1>
                              <p  className="mb-8 text-lg font-normal text-gray-800 lg:text-xl text-justify">

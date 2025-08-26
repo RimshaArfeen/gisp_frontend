@@ -6,7 +6,7 @@ const AdminDashboard = () => {
   // Fetch Student Data
   const getStudentData = async () => {
     try {
-      const response = await fetch(`https://sample-backend-gray.vercel.app/adminPg`);
+      const response = await fetch(`https://sample-backend-gray.vercel.app/api/adminPg`);
       if (!response.ok) {
         throw new Error("Error while fetching data");
       }
@@ -21,7 +21,7 @@ const AdminDashboard = () => {
   // Update Status
   const updateStatus = async (id, status) => {
     try {
-      const response = await fetch(`https://sample-backend-gray.vercel.app/adminPg/${id}`, {
+      const response = await fetch(`https://sample-backend-gray.vercel.app/api/adminPg/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status }),
@@ -55,7 +55,7 @@ const AdminDashboard = () => {
       <div className="max-w-7xl mx-auto">
         {/* Dashboard Header */}
         <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h1 className="text-3xl md:text-4xl font-bold dark-text">
             Admin Dashboard
           </h1>
           <p className="text-gray-600 mt-2">
@@ -73,7 +73,7 @@ const AdminDashboard = () => {
                 <div>
                   {/* Card Header with Name and Status */}
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-gray-900 truncate">
+                    <h3 className="text-xl font-semibold dark-text truncate">
                       {student.name || "N/A"}
                     </h3>
                     <span
@@ -91,35 +91,35 @@ const AdminDashboard = () => {
                   {/* Student Information Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 text-sm text-gray-600">
                     <div>
-                      <span className="font-medium text-gray-900">
+                      <span className="font-medium dark-text">
                         Father's Name:
                       </span>
                       <p className="truncate">{student.Fathersname || "N/A"}</p>
                     </div>
                     <div>
-                      <span className="font-medium text-gray-900">Email:</span>
+                      <span className="font-medium dark-text">Email:</span>
                       <p className="truncate">{student.email || "N/A"}</p>
                     </div>
                     <div>
-                      <span className="font-medium text-gray-900">
+                      <span className="font-medium dark-text">
                         Phone:
                       </span>
                       <p className="truncate">+92 {student.phone || "N/A"}</p>
                     </div>
                     <div >
-                      <span className=" font-medium text-gray-900">
+                      <span className=" font-medium dark-text">
                         CNIC
                       </span>
                       <p className="truncate">{student.cnic || "N/A"}</p>
                     </div>
                     <div>
-                      <span className="font-medium text-gray-900">
+                      <span className="font-medium dark-text">
                         Last Education/Institute:
                       </span>
                       <p className="truncate">{student.lastInstitute || "N/A"}</p>
                     </div>
                     <div>
-                      <span className="font-medium text-gray-900">
+                      <span className="font-medium dark-text">
                         Percentage:
                       </span>
                       <p className="truncate">{student.percentage || "N/A"}%</p>
@@ -128,7 +128,7 @@ const AdminDashboard = () => {
 
                    
                     <div className="col-span-1 sm:col-span-2">
-                      <span className="font-medium text-gray-900">
+                      <span className="font-medium dark-text">
                         Choosed Faculty - University:
                       </span>
                       <p className="truncate">
@@ -137,7 +137,7 @@ const AdminDashboard = () => {
                     </div>
 
                      <div>
-                      <span className="font-medium text-gray-900">
+                      <span className="font-medium dark-text">
                         Country:
                       </span>
                       <p className="truncate">{student.country || "N/A"}</p>

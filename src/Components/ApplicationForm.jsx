@@ -64,7 +64,7 @@ const onSubmit = async (data) => {
     } else {
         try {
             // Use fetch to send the FormData to the backend.
-            const response = await fetch(`https://sample-backend-gray.vercel.app/applicationForm`, {
+            const response = await fetch(`https://sample-backend-gray.vercel.app/api/applicationForm`, {
                 method: "POST",
                 body: formData,
             });
@@ -146,9 +146,9 @@ const onSubmit = async (data) => {
           <section className="body-font relative text-custom">
                <div className="mx-auto px-5 py-24">
                     <div className="mb-12 flex w-full flex-col text-center">
-                         <h1 className="title-font mb-4 text-3xl font-bold text-gray-900 sm:text-4xl uppercase">Application Form</h1>
+                         <h1 className="title-font mb-4 text-3xl font-bold dark-text sm:text-4xl uppercase">Application Form</h1>
                         <div className="w-full lg:w-2/3 mx-auto px-5 text-center">
-  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+  <h2 className="text-3xl lg:text-4xl font-bold dark-text mb-4">
     Your Journey Starts Here
   </h2>
   <p className="text-lg text-gray-700 leading-relaxed mb-6">

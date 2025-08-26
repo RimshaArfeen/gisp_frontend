@@ -43,12 +43,14 @@ Underline/Accent: #00ACC1 (Cyan) */
 }
 
 .light-text {
-          color: "#FFFFFF"
+          color: #FFF;
         }
 .dark-text{
-          color: "#0D1B2A"
+          color: #0D1B2A
  }
-
+.border-dark{
+     border-color: #0D1B2A;
+}
   /* primary{
           DEFAULT: "#415A77", // Charcoal as the primary accent
           light: "#778DA9", // Light blue for a softer touch
