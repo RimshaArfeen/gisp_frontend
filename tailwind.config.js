@@ -1,20 +1,37 @@
+
+
 // tailwind.config.js
-export default {
+import { defineConfig } from 'tailwindcss'
+
+export default defineConfig({
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
-        primary: "#003687",  // Deep Blue
-        secondary: "#00695C",// Teal Green
-        accent: "#FFB300",   // Amber
-        info: "#0288D1",     // Sky Blue
-        neutral: {
-          light: "#ECEFF1",  // Light Gray
-          DEFAULT: "#CFD8DC",// Cool Gray
-          dark: "#212121",   // Dark Gray
+        bg: {
+          light: "#F8F8F8",
+          footer: "#E0E0E0",
+          navbar: "#008080",
+          navbarDark: "#006666",
         },
-        base: "#FFFFFF",     // White
+        text: {
+          dark: "#333333",
+          light: "#F8F8F8",
+        },
+        primary: {
+          DEFAULT: "#008080",
+          light: "#4DB6AC",
+        },
+        secondary: {
+          DEFAULT: "#FFA500",
+          dark: "#E08E00",
+        },
+        border: "#666666",
       },
     },
   },
   plugins: [],
-};
+})

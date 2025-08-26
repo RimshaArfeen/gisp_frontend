@@ -9,10 +9,10 @@ import About from '../About/About.jsx'
  } from "./Data.js"
  const Overview = () => {
     return (
-         <div className='sm:px-10 py-20'>
+         <div className='sm:px-10 pb-24'>
               <About />
 
-              <div  className="w-full py-16 pt-0 -mt-36">
+              <div  className="w-full pb-16">
                    <div  className="container mx-auto px-6">
                         <div  className="flex flex-wrap md:space-x-8 space-y-10 md:space-y-0">
                              {missionAndVision.map((item, index) => {

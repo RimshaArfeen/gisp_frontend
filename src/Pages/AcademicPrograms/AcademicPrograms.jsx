@@ -10,7 +10,7 @@ const AcademicPrograms = () => {
     className: "center",
     centerMode: false,
     infinite: true,
-    slidesToShow: 3,
+    // slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     speed: 900,
@@ -38,9 +38,12 @@ const AcademicPrograms = () => {
   };
 
   return (
+    
+//AcademicPrograms
+
     <section className="text-gray-600 body-font py-24">
       <div className="container px-5 mx-auto flex flex-wrap justify-between">
-        <div className="md:w-1/4 px-4 mb-8 md:mb-0">
+        <div className="md:w-[30%] md:px-2 lg:px-4 mb-8 md:mb-0">
           <h2 data-aos="fade-right" className="md:text-4xl text-3xl font-bold uppercase tracking-widest title-font mb-2 text-gray-900">
             Academic <span className='block text-amber-600'>Programs</span>
           </h2>
@@ -50,11 +53,11 @@ const AcademicPrograms = () => {
           </p>
         </div>
         
-        <div data-aos="fade-left" className="w-full md:w-[70%] lg:w-[72%]">
+        <div data-aos="fade-left" className="w-full md:w-[67%] lg:w-[69%]">
           <Slider {...settings}>
             {academicPrograms.map((item, index) => (
               <div key={index} className="p-2">
-                <div className="h-fit px-6 py-8 rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-white text-gray-800 transition-all duration-300 transform hover:scale-[1.03] group">
+                <div className="h-64 px-6 py-8 rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-white text-gray-800 transition-all duration-300 transform group">
                   <h2 className="tracking-widest text-xs font-semibold mb-4 text-white px-3 py-1 rounded-full bg-teal-600 inline-block">
                     {item.category}
                   </h2>

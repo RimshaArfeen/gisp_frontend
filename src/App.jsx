@@ -17,7 +17,7 @@ import Overview from './Pages/Overview/Overview';
 import Scholarships from './Pages/Scholarships/Scholarships';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
-
+import "./index.css"
 
 function App() {
   useEffect(() => {
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className='bg-[#CFD8DC]'>
+    <div className='bg-custom'>
         <Navbar />
         <ScrollToTop />
         <Routes>

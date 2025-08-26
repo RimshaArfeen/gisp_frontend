@@ -12,10 +12,8 @@ const About = () => {
   const [onHover, setHoverIdx] = useState(null)
 
   return (
-
-
-
-      <section className="container px-5 lg:px-7 pb-24 mx-auto">
+// About
+      <section className="container px-5 lg:px-7 py-24 mx-auto">
         <div className="flex justify-center flex-wrap w-full mb-20 lg:mb-0">
           <div className="lg:w-[55%] w-full mb-4 lg:mb-0">
             <h1 className="sm:text-4xl text-3xl font-bold title-font mb-2 text-gray-900">

@@ -5,8 +5,8 @@ const ScholarshipBenefits = () => {
 
 
     return (
-
-        <section className='lg:px-5 py-24'>
+//
+        <section className='lg:px-5 pb-24'>
            <h2
                     data-aos="fade-up"
                     className="w-full text-3xl md:text-4xl font-bold uppercase tracking-wide text-center lg:text-right text-gray-900 mb-4"

@@ -27,59 +27,192 @@ const Navbar = () => {
 
   
   return (
-    <nav className="bg-teal text-gray-100 shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex items-center">
-            <span className="text-3xl font-bold text-gray-100 tracking-wider ">🎓 GISP</span>
-          </div>
-          <div className="hidden md:flex space-x-8">
-            {applicants ? (
-              <>
-                <NavLink to={`/home`} className=" hover:text-teal-300 transition uppercase tracking-widest">Home</NavLink>
-                <NavLink to={`/overview`} className=" hover:text-teal-300 transition uppercase tracking-widest">Overview</NavLink>
-                <NavLink to={`/scholarships`} className=" hover:text-teal-300 transition uppercase tracking-widest">Scholarships</NavLink>
-                <NavLink to={`/contact`} className=" hover:text-teal-300 transition uppercase tracking-widest">Contact</NavLink>
-                <NavLink to={`/profile`} className=" hover:text-teal-300 transition uppercase tracking-widest">Profile</NavLink>
-                {applicants.role === "admin" && (
-
-                <NavLink to="/adminDashboard" className=" hover:text-teal-300 transition uppercase tracking-widest">Admin dashboard</NavLink>
-                )}
-              </>
-            ) : (
-              <>
-                <NavLink to="/signup" className=" hover:text-teal-300 transition uppercase tracking-widest">Sign Up</NavLink>
-                <NavLink to="/" className=" hover:text-teal-300 transition uppercase tracking-widest">Login </NavLink>
-              </>
+   <nav className="bg-[#008080] text-[#F8F8F8] shadow-md fixed w-full z-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between h-16 items-center">
+      <div className="flex items-center">
+        <span className="text-3xl font-bold text-[#F8F8F8] tracking-wider">🎓 GISP</span>
+      </div>
+      <div className="hidden md:flex space-x-8">
+        {applicants ? (
+          <>
+            <NavLink
+              to={`/home`}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#FFA500] uppercase tracking-widest"
+                  : "hover:text-[#FFA500] transition uppercase tracking-widest"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to={`/overview`}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#FFA500] uppercase tracking-widest"
+                  : "hover:text-[#FFA500] transition uppercase tracking-widest"
+              }
+            >
+              Overview
+            </NavLink>
+            <NavLink
+              to={`/scholarships`}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#FFA500] uppercase tracking-widest"
+                  : "hover:text-[#FFA500] transition uppercase tracking-widest"
+              }
+            >
+              Scholarships
+            </NavLink>
+            <NavLink
+              to={`/contact`}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#FFA500] uppercase tracking-widest"
+                  : "hover:text-[#FFA500] transition uppercase tracking-widest"
+              }
+            >
+              Contact
+            </NavLink>
+            <NavLink
+              to={`/profile`}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#FFA500] uppercase tracking-widest"
+                  : "hover:text-[#FFA500] transition uppercase tracking-widest"
+              }
+            >
+              Profile
+            </NavLink>
+            {applicants.role === "admin" && (
+              <NavLink
+                to="/adminDashboard"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#FFA500] uppercase tracking-widest"
+                    : "hover:text-[#FFA500] transition uppercase tracking-widest"
+                }
+              >
+                Admin dashboard
+              </NavLink>
             )}
-          </div>
-          <div className="md:hidden transition-all duration-300 ">
-            <span onClick={toggleMenu} className="material-symbols-outlined hover:text-teal-300 focus:outline-none ">
-              {isOpen ? "close" : "menu"}
-            </span>
-          </div>
-        </div>
+          </>
+        ) : (
+          <>
+            <NavLink
+              to="/signup"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#FFA500] uppercase tracking-widest"
+                  : "hover:text-[#FFA500] transition uppercase tracking-widest"
+              }
+            >
+              Sign Up
+            </NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#FFA500] uppercase tracking-widest"
+                  : "hover:text-[#FFA500] transition uppercase tracking-widest"
+              }
+            >
+              Login
+            </NavLink>
+          </>
+        )}
       </div>
-      <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-teal shadow-md">
-          {applicants ? (
-            <>
-              <NavLink to={`/home`} className="block  hover:text-teal-300 transition uppercase tracking-widest">Home</NavLink>
-              <NavLink to={`/overview`} className="block  hover:text-teal-300 transition uppercase tracking-widest">Overview</NavLink>
-              <NavLink to={`/scholarships`} className="block  hover:text-teal-300 transition uppercase tracking-widest">Scholarships</NavLink>
-              <NavLink to={`/contact`} className="block  hover:text-teal-300 transition uppercase tracking-widest">Contact</NavLink>
-              <NavLink to={`/profile`} className="block  hover:text-teal-300 transition uppercase tracking-widest">Profile</NavLink>
-            </>
-          ) : (
-            <>
-              <NavLink to="/signup" className="block  hover:text-teal-300 transition uppercase tracking-widest">Sign Up</NavLink>
-              <NavLink to="/" className="block  hover:text-teal-300 transition uppercase tracking-widest">Login </NavLink>
-            </>
-          )}
-        </div>
+      <div className="md:hidden transition-all duration-300">
+        <span onClick={toggleMenu} className="material-symbols-outlined hover:text-[#FFA500] focus:outline-none">
+          {isOpen ? "close" : "menu"}
+        </span>
       </div>
-
-    </nav>
+    </div>
+  </div>
+  <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
+    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#008080] shadow-md">
+      {applicants ? (
+        <>
+          <NavLink
+            to={`/home`}
+            className={({ isActive }) =>
+              isActive
+                ? "block text-[#FFA500] uppercase tracking-widest"
+                : "block hover:text-[#FFA500] transition uppercase tracking-widest"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to={`/overview`}
+            className={({ isActive }) =>
+              isActive
+                ? "block text-[#FFA500] uppercase tracking-widest"
+                : "block hover:text-[#FFA500] transition uppercase tracking-widest"
+            }
+          >
+            Overview
+          </NavLink>
+          <NavLink
+            to={`/scholarships`}
+            className={({ isActive }) =>
+              isActive
+                ? "block text-[#FFA500] uppercase tracking-widest"
+                : "block hover:text-[#FFA500] transition uppercase tracking-widest"
+            }
+          >
+            Scholarships
+          </NavLink>
+          <NavLink
+            to={`/contact`}
+            className={({ isActive }) =>
+              isActive
+                ? "block text-[#FFA500] uppercase tracking-widest"
+                : "block hover:text-[#FFA500] transition uppercase tracking-widest"
+            }
+          >
+            Contact
+          </NavLink>
+          <NavLink
+            to={`/profile`}
+            className={({ isActive }) =>
+              isActive
+                ? "block text-[#FFA500] uppercase tracking-widest"
+                : "block hover:text-[#FFA500] transition uppercase tracking-widest"
+            }
+          >
+            Profile
+          </NavLink>
+        </>
+      ) : (
+        <>
+          <NavLink
+            to="/signup"
+            className={({ isActive }) =>
+              isActive
+                ? "block text-[#FFA500] uppercase tracking-widest"
+                : "block hover:text-[#FFA500] transition uppercase tracking-widest"
+            }
+          >
+            Sign Up
+          </NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "block text-[#FFA500] uppercase tracking-widest"
+                : "block hover:text-[#FFA500] transition uppercase tracking-widest"
+            }
+          >
+            Login
+          </NavLink>
+        </>
+      )}
+    </div>
+  </div>
+</nav>
   );
 };
 

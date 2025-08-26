@@ -16,7 +16,7 @@ const Scholarships = () => {
   };
 
   return (
-    <section className="py-24 px-5" style={{ backgroundColor: palette.background }}>
+    <section className="py-24 px-5">
       {/* Hero Section with illustration and main heading */}
       <div className="text-center pt-10">
         <h1 className="text-4xl md:text-5xl font-bold uppercase mb-2" style={{ color: palette.headings }}>
@@ -46,8 +46,8 @@ const Scholarships = () => {
           >
             <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 flex items-center gap-4" style={{ color: palette.headings }}>
               {/* Using a placeholder for modern icons */}
-              <span className="material-icons text-3xl" style={{ color: palette.text }}>
-                {section.icon}
+              <span className="material-symbols-outlined text-3xl" style={{ color: palette.text }}>
+                ✅
               </span>
               <span>{section.sectionTitle}</span>
             </h3>
@@ -56,7 +56,7 @@ const Scholarships = () => {
               <ul className="list-none space-y-4 text-lg" style={{ color: palette.text }}>
                 {section.points.map((point, i) => (
                   <li key={i} className="flex items-start">
-                    <span className="material-icons text-xl mr-3" style={{ color: palette.accent }}>
+                    <span className="material-symbols-outlined text-xl mr-3" style={{ color: palette.accent }}>
                       check_circle
                     </span>
                     {point}

@@ -8,8 +8,10 @@ import 'slick-carousel/slick/slick-theme.css';
 // The UniversitiesInfo component is not modified as the focus is on UniDetails.
 const UniversitiesInfo = () => {
   return (
-<section className=" pb-24 h-screen">
-      <div className="container mx-auto px-5">
+
+    //Scholarship
+<section className="lgpb-48 h-fit ">
+      <div className="container mx-auto px-5 h-fit overflow-hidden">
         
         {/* Section Heading */}
         <div className="text-center mb-16">
@@ -22,7 +24,7 @@ const UniversitiesInfo = () => {
         <div className="flex flex-wrap -m-4">
           {universities.map((item, index) => (
             <div key={index} className="p-4 md:w-1/3">
-              <div className="bg-gray-100 rounded-xl shadow-lg overflow-hidden h-full transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-gray-200 rounded-xl shadow-lg overflow-hidden h-full transform transition-transform duration-300 ">
                 
                 <NavLink to={`/UniDetails/${item.name}`}>
                   <div className="h-64 overflow-hidden">
