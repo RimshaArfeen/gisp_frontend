@@ -21,7 +21,7 @@ const Contact = ({ data }) => {
       ></iframe>
 
       {/* Address Box - Positioned Over the Map */}
-      <div className="bg-[#0f766e] bg-opacity-90 absolute bottom-10 right-10 z-10 flex flex-wrap py-6 rounded shadow-md max-w-md w-full">
+      <div className="bg-[#0f766e] bg-opacity-90 absolute bottom-10 sm:right-10 z-10 flex flex-wrap py-6 rounded shadow-md max-w-md w-full">
         <div className="w-full px-6">
           <h2 className="title-font font-semibold text-white tracking-widest text-xs">ADDRESS</h2>
           <p className="mt-1 text-white">Gulistan-e-Johar Block 17, Karachi</p>

@@ -153,13 +153,13 @@ export const UniDetails = () => {
         </svg>
       </a>
     </div>
-    <div className="w-full flex flex-wrap justify-center mt-12 gap-y-6 gap-x-12">
+    <div className="w-full flex flex-wrap justify-start md:justify-center mt-12 gap-y-6 gap-x-12">
       {university.contact.map((item, index) => (
         <div key={index} className="flex items-center">
-          <span className="material-symbols-outlined flex items-center justify-center text-text-light bg-navbar p-3 rounded-full text-2xl drop-shadow-md">
+          <span className="material-symbols-outlined flex items-center justify-center bg-gray-100/20 p-3 rounded-full text-2xl drop-shadow-md">
             {item.icon}
           </span>
-          <p className="ml-4 text-text-light text-lg">{item.description}</p>
+          <p className=" ml-2 sm:ml-4 text-text-light text-sm text-left  sm:text-lg">{item.description}</p>
         </div>
       ))}
     </div>
@@ -172,7 +172,7 @@ export const UniDetails = () => {
         <h2 className="text-3xl font-bold dark-text">
           About {university.name}
         </h2>
-         <div className="h-1 w-40 bg-amber-600 rounded my-2"></div>
+         <div className="h-1 w-5/6 sm:w-40 mx-auto sm:mx-0 bg-amber-600 rounded my-2"></div>
         <p className="leading-relaxed text-lg dark-text text-justify mb-8">
           {university.overview}
         </p>
@@ -219,6 +219,7 @@ export const UniDetails = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className=' w-fit sm:w-full'
         ></iframe>
       </div>
     </div>
@@ -239,7 +240,7 @@ export const UniDetails = () => {
     {university.scholarships.map((item, index) => (
       <div
         key={index}
-        className="mb-16 p-8 rounded-xl shadow-lg bg-gray-200 hover:shadow-xl transition-shadow duration-300 ease-in-out"
+        className="mb-16 p-3 sm:p-8 rounded-xl shadow-lg bg-gray-200 hover:shadow-xl transition-shadow duration-300 ease-in-out"
       >
         <h3 className="text-3xl font-bold dark-text text-center mb-2">
           {item.name}
@@ -247,7 +248,7 @@ export const UniDetails = () => {
         <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-center mb-8 dark-text">
           {item.description}
         </p>
-        <div className="flex lg:w-[84%] w-full flex-col md:flex-row mx-auto items-start justify-between px-8 lg:px-0 gap-8">
+        <div className="flex lg:w-[84%] w-full flex-col md:flex-row mx-auto items-start justify-between px-2 sm:px-8 lg:px-0 gap-8">
           {/* Eligibility */}
           <div className="w-full md:w-1/2 lg:w-[46%] p-6 rounded-lg border border-amber-600">
             <h4 className="text-2xl font-bold dark-text mb-4">
