@@ -27,7 +27,7 @@ const Profile = () => {
         return;
       }
 
-      let response = await fetch(`/api/profile`, {
+      let response = await fetch(`https://sample-backend-gray.vercel.app/profile`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
