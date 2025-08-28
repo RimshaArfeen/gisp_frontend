@@ -1,6 +1,7 @@
 
 import React from 'react'
 import About from '../About/About.jsx'
+import "../../index.css"
  import {
     whatWeDoPoints,
     missionAndVision,
@@ -37,19 +38,19 @@ import About from '../About/About.jsx'
                    <div  className="container px-5 py-24 mx-auto">
                         <div  className=" mb-20">
                              <h1  className="sm:text-3xl text-2xl w-fit font-medium uppercase heading-custom mb-4">What We Do
-                                  <div  className="bg-teal h-[3px] rounded-full  my-2"></div>
+                                  <div  className="bg-amber-600 h-[3px] rounded-full  my-2"></div>
 
                              </h1>
                              <p  className="text-base md:px-3 text-gray-700 leading-relaxed  w-full tracking-wide text-justify  ">
                                   Our mission is to empower students to achieve their dreams of studying abroad by connecting them with the right scholarships and guidance. We simplify the process, offer personalized support, and provide access to global opportunities.
                              </p>
                         </div>
-                        <div  className="flex flex-wrap  sm:mx-auto sm:mb-2 -mx-2 text-gray-100">
+                        <div  className="flex flex-wrap  sm:mx-auto sm:mb-2 -mx-2 text-dark">
                              {whatWeDoPoints.map((item, index) => {
                                   return (
                                        <div key={index}  className=" m-1 sm:w-[48%] w-full">
                                             <div  className="border-2 border-custom bg-teal rounded flex h-full items-center">
-                                                 <i className={`material-symbols-outlined text-white w-13 h-13 p-3 pl-4`}>
+                                                 <i className={`material-symbols-outlined text-amber-600  w-13 h-13 p-3 pl-4`}>
                                                       {item.icon}</i>
  
                                                  <span  className=" p-3 text-base leading-relaxed font-normal">{item.text}</span>

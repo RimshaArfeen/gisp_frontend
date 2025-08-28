@@ -43,7 +43,7 @@ const About = () => {
             data-aos="fade-right">
 
            
-    <div className="light-text flex flex-col justify-center sm:items-center bg-navbar rounded-xl shadow-md p-6 h-fit mx-auto mt-5 lg:mt-0 w-full">
+    <div className="light-text flex flex-col justify-center sm:items-center bg-teal-700 rounded-xl shadow-md p-6 h-fit mx-auto mt-5 lg:mt-0 w-full">
   <div className="w-full flex flex-col md:flex-row justify-around items-center">
     <div className="flex -space-x-4 rtl:space-x-reverse">
       {universityImages.map((item, idx) => (

@@ -26,6 +26,9 @@ const Profile = () => {
         console.log('Token not found');
         return;
       }
+      else{
+        navigate('/');
+      }
 
       let response = await fetch(`https://sample-backend-gray.vercel.app/profile`, {
         method: 'GET',
@@ -41,6 +44,7 @@ const Profile = () => {
 
       let result = await response.json();
       setData(result.authData.user);
+
       console.log(result.authData.user);
 
     } catch (error) {
@@ -55,7 +59,7 @@ const Profile = () => {
         {error ? (
           <div className="text-center text-red-500 font-medium">{error}</div>
         ) : !Data ? (
-          <div className="text-center text-gray-500">Loading profile...</div>
+          <div className="text-center text-lg text-gray-500">Loading profile...</div>
         ) : (
           <div className="flex flex-col items-center">
             {/* Profile Header Card */}

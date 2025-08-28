@@ -6,12 +6,12 @@ const Footer = () => {
   return (
     
 
-<footer className="bg-gray-900 dar heading-custom">
-    <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
+<footer className="bg-gray-900 heading-custom">
+    <div className="mx-auto w-full max-w-screen-xl p-2 sm:p-4 py-6 lg:py-8">
+        <div className="md:flex md:justify-around p-2">
           <div className="mb-6 md:mb-0 ">
               <span  className="flex flex-col items-center">
-                  <span className="self-center flex flex-wrap  text-gray-300 font-semibold whitespace-nowrap dark:text-white uppercase text-2xl md:text-3xl">
+                  <span className="self-center flex flex-wrap  text-gray-300 font-semibold whitespace-nowrap dark:text-white uppercase text-lg sm:text-3xl">
                     <span>🎓</span>
                     <h1 className=' flex flex-wrap md:flex-col '> Global IT
                     <span className=' ml-2 md:ml-0'> Scholarship Program</span>
@@ -20,9 +20,9 @@ const Footer = () => {
               <hr className=' w-full bg-amber-600 h-[2.5px] my-2 rounded-lg' />
               </span>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-6 lg:grid-cols-3">
               <div>
-                  <h2 className="mb-6 text-sm font-semibold heading-custom uppercase dark:text-white">Universities</h2>
+                  <h2 className=" mb-2 sm:mb-6 text-sm font-semibold heading-custom uppercase dark:text-white">Universities</h2>
                   <ul className="text-custom dark:text-gray-400 font-medium">
                       <li className="mb-4">
                           <a href="https://www.sabanciuniv.edu/" className="hover:underline">Sabanci University</a>
@@ -34,7 +34,7 @@ const Footer = () => {
                           <a href="https://www.yale.edu/" className="hover:underline">Manchester University</a>
                       </li>
                  
-                      <NavLink to={`/applicationForm`} className=" mt-[72px] w-full inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center heading-custom rounded-lg bg-custom  focus:ring-4 focus:ring-gray-500 dark:focus:ring-gray-900">
+                      <NavLink to={`/applicationForm`} className=" hidden sm:inline-flex mt-[72px] w-full  justify-center items-center py-3 px-5 text-base font-medium text-center heading-custom rounded-lg bg-custom  focus:ring-4 focus:ring-gray-500 dark:focus:ring-gray-900">
               Apply now
               <svg className="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <div className="sm:flex sm:items-center sm:justify-between">
+      <div className=" p-2 sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-custom sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">GISP™</a>. All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">

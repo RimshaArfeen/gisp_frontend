@@ -3,26 +3,18 @@ import { scholarshipEligibility } from '../Home/Data.js';
 import { scholarshipGuidelines } from "./Data.js";
 import UniversitiesInfo from '../UniversitiesInfo/UniversitiesInfo.jsx';
 import { NavLink } from 'react-router-dom';
-
+import "../../index.css";
 const Scholarships = () => {
-  // Define the new color palette using Tailwind's JIT classes or CSS variables
-  // For this example, we'll use inline styles and new class names for clarity.
-  const palette = {
-    background: '#CFD8DC',
-    text: '#009688',
-    headings: '#00695C',
-    buttons: '#FFEB3B',
-    accent: '#00ACC1'
-  };
+
 
   return (
-    <section className="py-24 px-5">
+    <section className="py-24 p-2 sm:px-5  text-gray-700">
       {/* Hero Section with illustration and main heading */}
       <div className="text-center pt-10">
-        <h1 className="text-4xl md:text-5xl font-bold uppercase mb-2" style={{ color: palette.headings }}>
+        <h1 className="text-4xl md:text-5xl heading-custom font-bold uppercase mb-2">
           Scholarship Rules & Requirements
         </h1>
-        <p className="text-xl text-teal-700">
+        <p className="text-xl text-gray-700">
           Find the information you need to apply for a brighter future.
         </p>
       </div>
@@ -30,33 +22,32 @@ const Scholarships = () => {
       {/* <UniversitiesInfo /> */}
       
       {/* Scholarship Guidelines Section */}
-      <div className="max-w-4xl mx-auto p-6 pt-16">
+      <div className=" w-full sm:max-w-4xl mx-auto p-2 sm:p-6 pt-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold uppercase mb-2" style={{ color: palette.headings }}>
+          <h2 className="text-3xl heading-custom font-bold uppercase mb-2" >
             Eligibility & Guidelines
           </h2>
-          <div className="h-1 w-24 mx-auto" style={{ backgroundColor: palette.accent }}></div>
+          <div className="h-1 w-24 mx-auto"></div>
         </div>
 
         {scholarshipGuidelines.map((section, index) => (
           <div
             key={index}
-            className="mb-8 bg-white shadow-lg rounded-xl p-8 border-l-4 transition-all duration-300 hover:shadow-xl"
-            style={{ borderColor: palette.accent }}
+            className="mb-8 bg-white shadow-lg rounded-xl p-2 sm:p-8 border-l-4 transition-all duration-300 hover:shadow-xl"
           >
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4 flex items-center gap-4" style={{ color: palette.headings }}>
+            <h3 className=" text-2xl font-bold uppercase tracking-wider mb-4 flex items-center gap-4">
               {/* Using a placeholder for modern icons */}
-              <span className="material-symbols-outlined text-3xl" style={{ color: palette.text }}>
+              <span className="material-symbols-outlined heading-custom text-3xl">
                 ✅
               </span>
               <span>{section.sectionTitle}</span>
             </h3>
 
             {section.type === "list" ? (
-              <ul className="list-none space-y-4 text-lg" style={{ color: palette.text }}>
+              <ul className="list-none space-y-4 text-lg">
                 {section.points.map((point, i) => (
                   <li key={i} className="flex items-start">
-                    <span className="material-symbols-outlined text-xl mr-3" style={{ color: palette.accent }}>
+                    <span className="material-symbols-outlined text-base sm:text-xl mr-3">
                       check_circle
                     </span>
                     {point}
@@ -64,13 +55,13 @@ const Scholarships = () => {
                 ))}
               </ul>
             ) : (
-              <div className="space-y-6" style={{ color: palette.text }}>
+              <div className="space-y-6">
                 {section.points.map((point, i) => (
                   <div key={i}>
-                    <h4 className="font-semibold text-xl mb-1" style={{ color: palette.headings }}>
+                    <h4 className="font-semibold text-base sm:text-xl mb-1">
                       {point.title}
                     </h4>
-                    <p className="text-base">{point.description}</p>
+                    <p className=" text-sm sm:text-base">{point.description}</p>
                   </div>
                 ))}
               </div>
@@ -80,10 +71,10 @@ const Scholarships = () => {
 
         {/* Final CTA section with prominent button */}
         <div className="w-full mx-auto mt-12 text-center">
-          <h3 className="text-2xl font-bold mb-4" style={{ color: palette.headings }}>
+          <h3 className="text-2xl font-bold mb-4">
             Ready to Apply?
           </h3>
-          <p className="text-lg mb-6" style={{ color: palette.text }}>
+          <p className="text-lg mb-6">
             Take the first step towards your academic future.
           </p>
           <NavLink

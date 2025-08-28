@@ -139,7 +139,7 @@ export const UniDetails = () => {
     <div className="flex justify-center mt-6">
       <a
         href="#scholarships"
-        className="inline-flex items-center py-4 px-8 text-xl font-medium bg-navbar light-text hover:bg-gray-100 hover:text-blue-950 rounded-full  transition-all duration-300 ease-in-out group"
+        className="inline-flex items-center py-4 px-8 text-xl font-medium bg-amber-600 text-gray-950  hover:bg-black hover:text-amber-600 rounded-full  transition-all duration-300 ease-in-out group"
       >
         Explore Scholarships
         <svg

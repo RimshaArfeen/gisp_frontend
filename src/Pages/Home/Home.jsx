@@ -53,19 +53,19 @@ const Home = () => {
           <h1 className="text-4xl md:text-6xl text-dark font-extrabold tracking-wide mb-4 drop-shadow-lg">
             Welcome to <span className="text-secondary">Global IT Scholarship Program</span>
           </h1>
-          <p className="text-lg md:text-xl font-light mb-8 drop-shadow-md">
+          <p className="text-lg md:text-xl  text-gray-900 mb-8 drop-shadow-md">
             Empowering Future Innovators with Prestigious IT Scholarships
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center uppercase gap-4">
             <NavLink
               to="/applicationForm"
-              className="px-8 py-3 rounded-full bg-secondary hover:bg-secondary-dark text-lg font-semibold shadow-lg transition-colors"
+              className="px-8 py-3 rounded-full transition-all duration-300 bg-amber-600 hover:bg-black hover:text-amber-600 text-lg font-semibold shadow-lg"
             >
               Apply Now
             </NavLink>
             <NavLink
               to="/scholarships"
-              className="px-8 py-3 rounded-full border border-text-light hover:bg-text-light hover:text-primary text-lg font-semibold shadow-lg transition-colors"
+              className="px-8 py-3 rounded-full border-2 border-text-light bg-gray-100/10 hover:bg-gray-100/40 text-lg font-semibold shadow-lg transition-all duration-300 "
             >
               See Guidelines
             </NavLink>
