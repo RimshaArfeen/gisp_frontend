@@ -26,14 +26,14 @@ const Profile = () => {
         console.log('Token not found');
         return;
       }
-      else{
-        navigate('/');
-      }
+      // else{
+      //   navigate('/');
+      // }
 
       let response = await fetch(`https://sample-backend-gray.vercel.app/profile`, {
         method: 'GET',
         headers: {
-          Authorization: `Bearer ${token}`,
+          'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
       });

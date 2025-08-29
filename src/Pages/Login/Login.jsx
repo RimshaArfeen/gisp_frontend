@@ -27,7 +27,7 @@ const Login = () => {
         },
         body: JSON.stringify(finalData)
       });
- 
+  
       const responseData = await result.json();
 
       if (responseData.auth && responseData.user?.role === role) {
