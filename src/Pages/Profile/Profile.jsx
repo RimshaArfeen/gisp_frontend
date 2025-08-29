@@ -30,7 +30,7 @@ const Profile = () => {
       //   navigate('/');
       // }
 
-      let response = await fetch(`https://sample-backend-gray.vercel.app/profile`, {
+      let response = await fetch(`https://sample-backend-9mvpdsk89-rimshaarfeens-projects.vercel.app//profile`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
