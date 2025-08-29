@@ -20,7 +20,7 @@ const Login = () => {
     try {
       const finalData = { ...data, role };
 
-      const result = await fetch(`https://sample-backend-9mvpdsk89-rimshaarfeens-projects.vercel.app/login`, {
+      const result = await fetch(`https://sample-backend-gray.vercel.app/login`, {
        method: "POST",
         headers: {
           'Content-Type': 'application/json',
