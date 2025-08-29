@@ -64,7 +64,7 @@ const onSubmit = async (data) => {
     } else {
         try {
             // Use fetch to send the FormData to the backend.
-            const response = await fetch(`https://sample-backend-9mvpdsk89-rimshaarfeens-projects.vercel.app//applicationForm`, {
+            const response = await fetch(`https://sample-backend-9mvpdsk89-rimshaarfeens-projects.vercel.app/applicationForm`, {
                 method: "POST",
                 body: formData,
             });
