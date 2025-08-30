@@ -20,14 +20,17 @@ const Login = () => {
     try {
       const finalData = { ...data, role };
 
-      const result = await fetch(`https://sample-backend-gray.vercel.app/login`, {
-       method: "POST",
+      const result = await fetch(`http://localhost:3000/login`, {
+
+        method: "POST",
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST,PATCH,OPTIONS'
         },
         body: JSON.stringify(finalData)
       });
-  
+
       const responseData = await result.json();
 
       if (responseData.auth && responseData.user?.role === role) {
@@ -51,7 +54,7 @@ const Login = () => {
         <h2 className="text-2xl font-semibold text-gray-800 text-center mb-6">
           Welcome Back
         </h2>
-        
+
         <form className="space-y-5">
           {/* Email */}
           <div>
