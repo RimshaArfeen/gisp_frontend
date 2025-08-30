@@ -21,8 +21,9 @@ const SignUp = () => {
     try {
       // Explicitly add the role here before sending to the server
       const finalData = { ...data, role: "student" };
+console.log(finalData);
 
-      let result = await fetch(`https://sample-backend-gray.vercel.app/signup`, {
+      let result = await fetch(`http://localhost:5000/signup`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

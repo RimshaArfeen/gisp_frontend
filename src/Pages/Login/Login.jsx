@@ -20,18 +20,15 @@ const Login = () => {
     try {
       const finalData = { ...data, role };
 
-      const result = await fetch(`https://sample-backend-gray.vercel.app/login`, {
+      const response = await fetch("http://localhost:5000/login", {
         method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          // 'Access-Control-Allow-Origin': '*',
-          // 'Access-Control-Allow-Methods': 'POST,PATCH,OPTIONS'
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(finalData)
       });
 
-      const responseData = await result.json();
+      console.log(finalData);
 
+      const responseData = await response.json();
       if (responseData.auth && responseData.user?.role === role) {
         localStorage.setItem("Applicants", JSON.stringify(responseData.user));
         localStorage.setItem("token", responseData.auth);
@@ -135,3 +132,5 @@ const Login = () => {
 };
 
 export default Login;
+
+
