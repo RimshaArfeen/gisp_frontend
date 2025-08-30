@@ -30,7 +30,7 @@ const Profile = () => {
       //   navigate('/');
       // }
 
-      let response = await fetch(`http://localhost:3000/profile`, {
+      let response = await fetch(`https://sample-backend-gray.vercel.app/profile`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,

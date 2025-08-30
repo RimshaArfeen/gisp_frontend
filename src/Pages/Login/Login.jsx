@@ -20,13 +20,12 @@ const Login = () => {
     try {
       const finalData = { ...data, role };
 
-      const result = await fetch(`http://localhost:3000/login`, {
-
+      const result = await fetch(`https://sample-backend-gray.vercel.app/login`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST,PATCH,OPTIONS'
+          // 'Access-Control-Allow-Origin': '*',
+          // 'Access-Control-Allow-Methods': 'POST,PATCH,OPTIONS'
         },
         body: JSON.stringify(finalData)
       });
